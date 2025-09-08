@@ -33,7 +33,7 @@ root@ax650:~#
 对应的 axp 版本可以通过以下方式获取
 
 - 签约客户请联系对应的 FAE 获取；
-- 社区用户请从 [BoardImages](https://huggingface.co/AXERA-TECH/BoardImages) 获取。
+- 社区用户请从 [BoardImages](https://hf-mirror.com/AXERA-TECH/BoardImages) 获取。
 
 ### 网络确认
 

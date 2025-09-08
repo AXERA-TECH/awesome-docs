@@ -21,7 +21,7 @@ copyright = '2025, AXERA Semiconductor Co., Ltd.'
 author = 'qqc'
 
 # The full version, including alpha/beta/rc tags
-release = 'V1.0'
+release = 'v1.0'
 
 # -- General configuration ---------------------------------------------------
 
