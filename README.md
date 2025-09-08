@@ -1,6 +1,6 @@
 # awesome-docs 使用手册
 
-[Web Preview](待补充)
+[**在线文档预览**](https://awesome-npu-docs.readthedocs.io/zh-cn/latest/index.html#)
 
 ## 1. 项目背景
 
