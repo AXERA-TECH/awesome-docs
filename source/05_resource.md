@@ -1,14 +1,18 @@
 # 其他资源
 
+## 芯片
+
+- [AX650N 产品规格书](https://axera-tech.com/filespath/files/20240202142256.pdf)
+
 ## GitHub
 
-- 外网：https://github.com/AXERA-TECH/
-- 国内镜像：https://gitee.com/axera-opensource (不定期更新)
+- [外网](https://github.com/AXERA-TECH/)
+- [国内镜像(不定期更新)](https://gitee.com/axera-opensource)
 
 ## Huggingface
 
-- 外网：https://huggingface.co/AXERA-TECH
-- 国内镜像：https://hf-mirror.com/AXERA-TECH
+- [外网](https://huggingface.co/AXERA-TECH)
+- [国内镜像](https://hf-mirror.com/AXERA-TECH)
 
 ## 淘宝开发板
 
@@ -52,6 +56,7 @@
 ## 技术交友
 
 - QQ 群：139953715 (入群验证请填写：一指禅文档，方便管理员通过)
-- 易百纳-爱芯专区：https://www.ebaina.com/channels/22
-- 一牛网-爱芯专区：https://bbs.16rd.com/forum-751-1.html
-- MaixHub-爱芯专区：https://maixhub.com/discussion/axera-pi
+- WeChat：爱芯开发者社区技术交流群
+- [易百纳-爱芯专区](https://www.ebaina.com/channels/22)
+- [一牛网-爱芯专区](https://bbs.16rd.com/forum-751-1.html)
+- [MaixHub-爱芯专区](https://maixhub.com/discussion/axera-pi)
