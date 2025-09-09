@@ -28,6 +28,15 @@
   - [英文](https://pulsar2-docs.readthedocs.io/en/latest/)
 - [docker 获取](https://hf-mirror.com/AXERA-TECH/Pulsar2)
 
+## AXCL 工具链
+
+基于 AX650 系列芯片做的 PCIE 算力卡使用的固件
+
+- 在线文档(更新不是那么及时)
+  - [中文](https://axcl-docs.readthedocs.io/zh-cn/latest/index.html)
+  - [英文]()
+- [安装包获取](https://hf-mirror.com/AXERA-TECH/AXCL)
+
 ## 知乎文章
 
 基于 AX650 系列的一些技术软文。客户最常见的问题："XXX模型怎么在 AX650N 上部署，你们有资料么？”，都能在 [**圈圈虫的知乎**](https://www.zhihu.com/people/tang-qi-14-37/posts) 上找到答案。重点拧出来几个高频率转发的文章
