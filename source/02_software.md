@@ -77,7 +77,7 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple gradio
 ```
 cd /root/
 # 外网下载安装
-pip install huggingface_hub
+pip install huggingface_hub -i https://pypi.tuna.tsinghua.edu.cn/simple
 # 配置国内镜像
 export HF_ENDPOINT=https://hf-mirror.com
 ```
