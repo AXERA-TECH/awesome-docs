@@ -88,7 +88,7 @@ cd /root/
 hf download AXERA-TECH/Qwen2.5-7B-Instruct --local-dir Qwen2.5-7B-Instruct
  
 cd Qwen2.5-7B-Instruct/
-chmod 777 main_ax650 run_qwen2.5_7b_ctx_ax650.sh
+chmod 777 main_ax650 run_qwen2.5_7b_ctx_int4_ax650.sh
  
 # 运行
 cd /root/Qwen2.5-7B-Instruct/
@@ -96,7 +96,7 @@ python3 qwen2.5_tokenizer_uid.py --host 127.0.0.1 --port 12345
 
 # 再开一个终端执行
 cd /root/Qwen2.5-7B-Instruct/
-./run_qwen2.5_7b_ctx_ax650.sh
+./run_qwen2.5_7b_ctx_int4_ax650.sh
 ```
 
 ### Qwen2.5-1.5B-Instruct
@@ -108,7 +108,7 @@ hf download AXERA-TECH/Qwen2.5-1.5B-Instruct --local-dir Qwen2.5-1.5B-Instruct
  
 cd Qwen2.5-1.5B-Instruct/
 chmod 777 main_ax650 run_qwen2.5_1.5b_ctx_ax650.sh
- 
+
 # 运行
 cd /root/Qwen2.5-1.5B-Instruct/
 python3 qwen2.5_tokenizer_uid.py --host 127.0.0.1 --port 12345
@@ -158,10 +158,10 @@ python3 infer.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_
  
 # sample2
 python3 infer.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_axmodel/ -q "请分别描述这几幅图像的内容, 并找出它们的异同点" -i examples/image_0.jpg examples/image_1.jpg examples/image_2.png examples/image_3.png --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel
- 
+
 # sample3
-python3 infer_video.py --hf_model internvl3_2b_tokenizer/ --axmodel_path InternVL3-2B_axmodel_chunk_128_2048/ --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel -q "请描述这个视频" -i examples/red-panda.mp4
- 
+python3 infer_video.py --hf_model internvl3_2b_tokenizer/ --axmodel_path InternVL3_2b_axmodel/ --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel -q "请描述这个视频" -i examples/red-panda.mp4
+
 # sample4， web页面
 # 需要安装依赖 gradio，“安装 python 依赖” 小节已包含
 python3 gradio_demo_python_api.py --hf_model internvl3_2b_tokenizer/ \
@@ -187,7 +187,7 @@ cd /root/Qwen2.5-VL-3B-Instruct/
  
 # image sample
 cd /root/Qwen2.5-VL-3B-Instruct/
-python3 qwen2_tokenizer_image_448.py --host 127.0.0.1 --port 12345
+python3 qwen2_tokenizer_image.py --host 127.0.0.1 --port 12345
  
 # 再开一个终端执行
 cd /root/Qwen2.5-VL-3B-Instruct/
@@ -220,26 +220,12 @@ python3 run_txt2img_axe_infer.py
 # 下载仓库
 cd /root/
 
-# 根据本地芯片平台选择编译650 host/axcl x86/axcl aarch64平台的 libclip.so
-# 650 host编译
+# 根据本地芯片平台选择编译650n demo板的 libclip.so
+# 编译
 git clone --recursive https://github.com/AXERA-TECH/libclip.axera.git
 cd libclip.axera
 sudo apt install libopencv-dev build-essential
 ./build.sh
- 
-# axcl x86编译
-git clone --recursive https://github.com/AXERA-TECH/libclip.axera.git
-cd libclip.axera
-sudo apt install libopencv-dev build-essential
-mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j8
-make install
- 
-# axcl aarch64编译
-git clone --recursive https://github.com/AXERA-TECH/libclip.axera.git
-cd libclip.axera
-./build_aarch64.sh
  
 # 下载 LibCLIP 相关模型和运行脚本
 hf download AXERA-TECH/LibCLIP --local-dir LibCLIP
@@ -252,8 +238,6 @@ tar -xf coco_1000.tar
 # 650 host 运行命令
 python3 pyclip/gradio_example.py --ienc cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel --tenc cnclip/cnclip_vit_l14_336px_text_u16.axmodel --vocab cnclip/cn_vocab.txt --isCN 1 --db_path clip_feat_db_coco --image_folder coco_1000/ --dev_type host
 
-# axcl运行命令
-python3 pyclip/gradio_example.py --ienc cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel --tenc cnclip/cnclip_vit_l14_336px_text_u16.axmodel --vocab cnclip/cn_vocab.txt --isCN 1 --db_path clip_feat_db_coco --image_folder coco_1000/ --dev_type axcl
 #运行后，如板端ip地址为 192.168.1.100，则使用浏览器打开 http://192.168.1.100:7860 页面来进行交互。
 ```
 
