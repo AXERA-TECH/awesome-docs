@@ -180,7 +180,7 @@ cd /root/
 hf download AXERA-TECH/Qwen2.5-VL-3B-Instruct --local-dir Qwen2.5-VL-3B-Instruct
 
 cd Qwen2.5-VL-3B-Instruct/
-chmod 755 run_qwen2_5_vl_image.sh run_qwen2_5_vl_video.sh main
+chmod 755 run_qwen2_5_vl_image.sh run_qwen2_5_vl_video.sh
  
 # 运行
 cd /root/Qwen2.5-VL-3B-Instruct/
