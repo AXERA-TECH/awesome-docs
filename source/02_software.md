@@ -66,7 +66,7 @@ yes | apt-get install libass-dev libfdk-aac-dev libmp3lame-dev libopus-dev libvp
 #### 安装 Python 依赖
 
 ```
-pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy opencv-python transformers ml_dtypes tqdm jinja2 torch torchvision
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy opencv-python transformers ml_dtypes tqdm jinja2 torch torchvision onnxruntime
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple ultralytics diffusers peft protobuf librosa kaldi_native_fbank sentencepiece
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple zhconv cn2an pypinyin jieba g2p_en nltk
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple gradio
