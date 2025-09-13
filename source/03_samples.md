@@ -228,6 +228,7 @@ sudo apt install libopencv-dev build-essential
 ./build.sh
  
 # 下载 LibCLIP 相关模型和运行脚本
+cd /root/
 hf download AXERA-TECH/LibCLIP --local-dir LibCLIP
  
 # 运行
@@ -272,8 +273,9 @@ cd pyyoloworld/
 python3 gradio_example.py --yoloworld ../models/yolo_u16_ax650.axmodel --tenc ../models/clip_b1_u16_ax650.axmodel --vocab ../vocab.txt --dev_type host
 
 # 运行后，查看最后 log 里打印的 web 地址，例如：“HTTP 服务地址: http://x.x.x.x:7860”，x.x.x.x 替换为板端 ip 地址，使用浏览器打开页面来进行交互。
-
 # 可以直接使用板子自身桌面系统上的浏览器打开，也可以使用同一局域网内的电脑或手机或其他设备的浏览器打开。
+
+#相关使用方法请参考：https://hf-mirror.com/AXERA-TECH/YOLO-World-V2 Model card说明
 ```
 
 ### YOLO11
