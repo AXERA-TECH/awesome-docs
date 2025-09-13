@@ -286,11 +286,11 @@ hf download AXERA-TECH/YOLO11 --local-dir YOLO11
 cd YOLO11/
 
 # 使用提供的ax_yolo11
-chmod 755 ax_yolo11
+chmod 755 ./ax_aarch64/ax_yolo11
  
 # 运行
 cd /root/YOLO11/
-./ax_yolo11 -m ax650/yolo11s.axmodel -i ssd_horse.jpg
+./ax_aarch64/ax_yolo11 -m ax650/yolo11s.axmodel -i ssd_horse.jpg
 ```
 
 ## HuggingFaceTB
