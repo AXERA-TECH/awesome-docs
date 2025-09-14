@@ -219,27 +219,18 @@ python3 run_txt2img_axe_infer.py
 ```
 # 下载仓库
 cd /root/
-
-# 根据本地芯片平台选择编译650n demo板的 libclip.so
-# 编译
-git clone --recursive https://github.com/AXERA-TECH/libclip.axera.git
-cd libclip.axera
-sudo apt install libopencv-dev build-essential
-./build.sh
- 
-# 下载 LibCLIP 相关模型和运行脚本
-cd /root/
 hf download AXERA-TECH/LibCLIP --local-dir LibCLIP
  
 # 运行
-cp /root/libclip.axera/build/libclip.so /root/LibCLIP/pyclip/
 cd /root/LibCLIP
 tar -xf coco_1000.tar
+cp install/lib/host_650/libclip.so ./pyclip/
 
 # 650 host 运行命令
 python3 pyclip/gradio_example.py --ienc cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel --tenc cnclip/cnclip_vit_l14_336px_text_u16.axmodel --vocab cnclip/cn_vocab.txt --isCN 1 --db_path clip_feat_db_coco --image_folder coco_1000/ --dev_type host
 
 #运行后，如板端ip地址为 192.168.1.100，则使用浏览器打开 http://192.168.1.100:7860 页面来进行交互。
+#相关使用方法请参考：https://hf-mirror.com/AXERA-TECH/LibCLIP Model card说明
 ```
 
 ## Vision Models
