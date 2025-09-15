@@ -159,16 +159,14 @@ python3 infer.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_
 # sample2
 python3 infer.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_axmodel/ -q "请分别描述这几幅图像的内容, 并找出它们的异同点" -i examples/image_0.jpg examples/image_1.jpg examples/image_2.png examples/image_3.png --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel
 
-# sample3
-python3 infer_video.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_axmodel/ --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel -q "请描述这个视频" -i examples/red-panda.mp4
-
-# sample4， web页面
+# sample3， web页面
 # 需要安装依赖 gradio，“安装 python 依赖” 小节已包含
 python3 gradio_demo_python_api.py --hf_model internvl3_2b_tokenizer/ \
                                  --axmodel_path internvl3_2b_axmodel/ \
                                  --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel
 
 # 运行后，查看最后log里打印的web地址，例如：“HTTP 服务地址: http://10.126.20.94:7860”。需要用浏览器打开页面来进行交互。
+# 相关使用方法请参考：https://hf-mirror.com/AXERA-TECH/InternVL3-2B Model card说明
 #可以直接使用板子自身桌面系统上的浏览器打开，也可以使用同一局域网内的电脑或手机或其他设备的浏览器打开。
 ```
 
@@ -200,6 +198,8 @@ python3 qwen2_tokenizer_video_308.py --host 127.0.0.1 --port 12345
 # 再开一个终端执行
 cd /root/Qwen2.5-VL-3B-Instruct/
 ./run_qwen2_5_vl_video.sh
+
+#相关使用方法请参考：https://hf-mirror.com/AXERA-TECH/Qwen2.5-VL-3B-Instruct Model card说明
 ```
 
 ### lcm-lora-sdv1-5(文生图)
