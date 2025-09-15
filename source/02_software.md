@@ -60,7 +60,7 @@ root@ax650:~#
 apt-get update
 yes | apt-get install rsync python3-dev python3-setuptools unzip
 yes | apt-get install libsndfile1-dev libmecab-dev
-yes | apt-get install libass-dev libfdk-aac-dev libmp3lame-dev libopus-dev libvpx-dev libx264-dev libx265-dev libssl-dev
+yes | apt-get install libass-dev libfdk-aac-dev libmp3lame-dev libopus-dev libvpx-dev libx264-dev libx265-dev libssl-dev libgl1-mesa-glx
 ```
 
 #### 安装 Python 依赖
