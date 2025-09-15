@@ -187,7 +187,7 @@ cd /root/Qwen2.5-VL-3B-Instruct/
  
 # image sample
 cd /root/Qwen2.5-VL-3B-Instruct/
-python3 qwen2_tokenizer_image.py --host 127.0.0.1 --port 12345
+python3 qwen2_tokenizer_images.py --host 127.0.0.1 --port 12345
  
 # 再开一个终端执行
 cd /root/Qwen2.5-VL-3B-Instruct/
