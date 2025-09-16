@@ -330,6 +330,22 @@ cd /root/SmolVLM-256M-Instruct/
 
 ## Audio Models
 
+### 3D-Speaker-MT.axera（会议音频转录）
+```
+# 下载仓库
+cd /root/
+hf download AXERA-TECH/3D-Speaker-MT.axera --local-dir 3D-Speaker-MT.axera
+ 
+# 安装相关依赖
+cd /root/3D-Speaker-MT.axera/
+pip3 install -r requirements.txt
+
+# 运行
+python3 ax_meeting_transc_demo.py --output_dir output_dir --wav_file wav/vad_example.wav
+# 查看相关结果
+cat ./output_dir/vad_example.wav.txt
+```
+
 ### SenseVoice
 
 ```
