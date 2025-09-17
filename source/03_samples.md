@@ -159,7 +159,10 @@ python3 infer.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_
 # sample2
 python3 infer.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_axmodel/ -q "请分别描述这几幅图像的内容, 并找出它们的异同点" -i examples/image_0.jpg examples/image_1.jpg examples/image_2.png examples/image_3.png --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel
 
-# sample3， web页面
+# sample3
+python3 infer_video.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_axmodel/ --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel -q "请描述这个视频" -i examples/red-panda.mp4
+
+# sample4， web页面
 # 需要安装依赖 gradio，“安装 python 依赖” 小节已包含
 python3 gradio_demo_python_api.py --hf_model internvl3_2b_tokenizer/ \
                                  --axmodel_path internvl3_2b_axmodel/ \
