@@ -390,3 +390,123 @@ cd /root/MeloTTS/python/
 export NLTK_DATA="/root/MeloTTS/nltk_data"
 python3 melotts.py -s 爱芯元智半导体股份有限公司，致力于打造世界领先的人工智能感知与边缘计算芯片。服务智慧城市、智能驾驶、机器人的海量普惠的应用 -e ../encoder-onnx/encoder-zh.onnx -d ../decoder-ax650/decoder-zh.axmodel
 ```
+
+# 示例展示（算力卡 x86平台）
+
+## LLM
+
+### DeepSeek-R1-Distill-Qwen-7B
+
+```
+# 下载仓库
+cd /root/
+ 
+hf download AXERA-TECH/DeepSeek-R1-Distill-Qwen-7B --local-dir DeepSeek-R1-Distill-Qwen-7B
+
+cd DeepSeek-R1-Distill-Qwen-7B/
+chmod 755 main_a* run_deepseek-r1_7b_*
+ 
+# 运行
+cd /root/DeepSeek-R1-Distill-Qwen-7B/
+python3 deepseek-r1_tokenizer.py --host 127.0.0.1 --port 12345
+
+# 再开一个终端执行
+cd /root/DeepSeek-R1-Distill-Qwen-7B/
+./run_deepseek-r1_7b_int4_axcl_x86.sh
+```
+
+### DeepSeek-R1-Distill-Qwen-1.5B
+
+```
+# 下载仓库
+cd /root/
+ 
+hf download AXERA-TECH/DeepSeek-R1-Distill-Qwen-1.5B --local-dir DeepSeek-R1-Distill-Qwen-1.5B
+ 
+cd DeepSeek-R1-Distill-Qwen-1.5B/
+chmod 755 main_a* run_deepseek-r1_1.5b_*
+ 
+# 运行
+cd /root/DeepSeek-R1-Distill-Qwen-1.5B/
+python3 deepseek-r1_tokenizer_uid.py --host 127.0.0.1 --port 12345
+
+# 再开一个终端执行
+cd /root/DeepSeek-R1-Distill-Qwen-1.5B/
+./run_deepseek-r1_1.5b_axcl_x86.sh
+```
+
+### Qwen3-4B
+
+```
+# 下载仓库
+cd /root/ 
+hf download AXERA-TECH/Qwen3-4B --local-dir Qwen3-4B
+ 
+cd Qwen3-4B/
+chmod 755 main_a* run_qwen3_4b_*.sh
+ 
+# 运行
+cd /root/Qwen3-4B/
+python3 qwen3_tokenizer_uid.py --host 127.0.0.1 --port 12345
+
+# 再开一个终端执行
+cd /root/Qwen3-4B/
+./run_qwen3_4b_int8_ctx_axcl_x86.sh
+```
+
+### Qwen3-1.7B
+
+```
+# 下载仓库
+cd /root/ 
+hf download AXERA-TECH/Qwen3-1.7B --local-dir Qwen3-1.7B
+ 
+cd Qwen3-1.7B/
+chmod 755 main_a* run_qwen3_1.7b_*
+ 
+# 运行
+cd /root/Qwen3-1.7B/
+python3 qwen3_tokenizer_uid.py --host 127.0.0.1 --port 12345
+
+# 再开一个终端执行
+cd /root/Qwen3-1.7B/
+./run_qwen3_1.7b_int8_ctx_axcl_x86.sh
+```
+
+### Qwen2.5-7B-Instruct
+
+```
+# 下载仓库
+cd /root/
+hf download AXERA-TECH/Qwen2.5-7B-Instruct --local-dir Qwen2.5-7B-Instruct
+ 
+cd Qwen2.5-7B-Instruct/
+chmod 755 main_a* run_qwen2.5_7b_ctx_int4_*.sh
+ 
+# 运行
+cd /root/Qwen2.5-7B-Instruct/
+python3 qwen2.5_tokenizer_uid.py --host 127.0.0.1 --port 12345
+
+# 再开一个终端执行
+cd /root/Qwen2.5-7B-Instruct/
+./run_qwen2.5_7b_ctx_int4_axcl_x86.sh
+```
+
+### Qwen2.5-1.5B-Instruct
+
+```
+# 下载仓库
+cd /root/
+hf download AXERA-TECH/Qwen2.5-1.5B-Instruct --local-dir Qwen2.5-1.5B-Instruct
+
+cd Qwen2.5-1.5B-Instruct/
+chmod 755 main_a* run_qwen2.5_1.5b_*.sh
+
+# 运行
+cd /root/Qwen2.5-1.5B-Instruct/
+python3 qwen2.5_tokenizer_uid.py --host 127.0.0.1 --port 12345
+
+# 再开一个终端执行
+cd /root/Qwen2.5-1.5B-Instruct/
+./run_qwen2.5_1.5b_ctx_int4_axcl_x86.sh
+```
