@@ -215,6 +215,8 @@ hf download AXERA-TECH/lcm-lora-sdv1-5 --local-dir lcm-lora-sdv1-5
 # 运行
 cd /root/lcm-lora-sdv1-5/
 python3 run_txt2img_axe_infer.py
+python3 run_img2img_axe_infer.py
+python3 run_txt2img_axe_infer_prompt.py #仅支持英文输入
 ```
 
 ### LibCLIP(文搜大模型)
@@ -509,4 +511,124 @@ python3 qwen2.5_tokenizer_uid.py --host 127.0.0.1 --port 12345
 # 再开一个终端执行
 cd /root/Qwen2.5-1.5B-Instruct/
 ./run_qwen2.5_1.5b_ctx_int4_axcl_x86.sh
+```
+
+## Multimodal Models
+
+### 第三方依赖
+
+```
+cd /root/
+hf download AXERA-TECH/awesome-files --local-dir awesome-files
+cp awesome-files/FFmpeg-n4.4.6-ax650.tar.gz ./
+cp awesome-files/decord-ax650.tar.gz ./
+```
+
+### InternVL3-2B.axera(图片&视频理解)
+
+```
+# 用户使用提供的包：FFmpeg-n4.4.6-ax650.tar.gz
+tar xzvf FFmpeg-n4.4.6-ax650.tar.gz
+cd FFmpeg-n4.4.6/
+make install
+ 
+# 安装decord
+cd /root/
+
+# 用户使用提供的包：decord-ax650.tar.gz
+tar xzvf decord-ax650.tar.gz
+cd decord/python/
+export PYTHONPATH=$PYTHONPATH:$PWD
+python3 setup.py install --user
+ 
+# 下载仓库
+cd /root/
+hf download AXERA-TECH/InternVL3-2B --local-dir InternVL3-2B
+ 
+# 运行
+cd InternVL3-2B
+ 
+# sample1
+python3 infer.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_axmodel/ --question "请计算函数[y=2x^2+2]的导数, 并提供 markdown 格式的推理过程"
+ 
+# sample2
+python3 infer.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_axmodel/ -q "请分别描述这几幅图像的内容, 并找出它们的异同点" -i examples/image_0.jpg examples/image_1.jpg examples/image_2.png examples/image_3.png --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel
+
+# sample3
+python3 infer_video.py --hf_model internvl3_2b_tokenizer/ --axmodel_path internvl3_2b_axmodel/ --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel -q "请描述这个视频" -i examples/red-panda.mp4
+
+# sample4， web页面
+# 需要安装依赖 gradio，“安装 python 依赖” 小节已包含
+python3 gradio_demo_python_api.py --hf_model internvl3_2b_tokenizer/ \
+                                 --axmodel_path internvl3_2b_axmodel/ \
+                                 --vit_model vit_axmodel/internvl3_2b_vit_slim.axmodel
+
+# 运行后，查看最后log里打印的web地址，例如：“HTTP 服务地址: http://10.126.20.94:7860”。需要用浏览器打开页面来进行交互。
+# 相关使用方法请参考：https://hf-mirror.com/AXERA-TECH/InternVL3-2B Model card说明
+#可以直接使用板子自身桌面系统上的浏览器打开，也可以使用同一局域网内的电脑或手机或其他设备的浏览器打开。
+```
+
+### Qwen2.5-VL-3B-Instruct(图片&视频理解)
+
+```
+# 下载仓库
+cd /root/
+hf download AXERA-TECH/Qwen2.5-VL-3B-Instruct --local-dir Qwen2.5-VL-3B-Instruct
+
+cd Qwen2.5-VL-3B-Instruct/
+chmod 755 run_qwen2_5_vl_* main_a*
+ 
+# 运行
+cd /root/Qwen2.5-VL-3B-Instruct/
+ 
+# image sample
+cd /root/Qwen2.5-VL-3B-Instruct/
+python3 qwen2_tokenizer_images.py --host 127.0.0.1 --port 12345
+ 
+# 再开一个终端执行
+cd /root/Qwen2.5-VL-3B-Instruct/
+./run_qwen2_5_vl_image_axcl_x86.sh
+ 
+# video sample
+cd /root/Qwen2.5-VL-3B-Instruct/
+python3 qwen2_tokenizer_video_308.py --host 127.0.0.1 --port 12345
+
+# 再开一个终端执行
+cd /root/Qwen2.5-VL-3B-Instruct/
+./run_qwen2_5_vl_video_axcl_x86.sh
+
+#相关使用方法请参考：https://hf-mirror.com/AXERA-TECH/Qwen2.5-VL-3B-Instruct Model card说明
+```
+
+### lcm-lora-sdv1-5(文生图)
+
+```
+# 下载仓库
+cd /root/
+hf download AXERA-TECH/lcm-lora-sdv1-5 --local-dir lcm-lora-sdv1-5
+
+# 运行
+cd /root/lcm-lora-sdv1-5/
+python3 run_txt2img_axe_infer.py
+python3 run_img2img_axe_infer.py
+python3 run_txt2img_axe_infer_prompt.py #仅支持英文输入
+```
+
+### LibCLIP(文搜大模型)
+
+```
+# 下载仓库
+cd /root/
+hf download AXERA-TECH/LibCLIP --local-dir LibCLIP
+ 
+# 运行
+cd /root/LibCLIP
+tar -xf coco_1000.tar
+cp ./install/lib/axcl_x86/libclip.so ./pyclip/
+
+# 650 host 运行命令
+python3 pyclip/gradio_example.py --ienc cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel --tenc cnclip/cnclip_vit_l14_336px_text_u16.axmodel --vocab cnclip/cn_vocab.txt --isCN 1 --db_path clip_feat_db_coco --image_folder coco_1000/ --dev_type axcl
+
+#运行后，如板端ip地址为 192.168.1.100，则使用浏览器打开 http://192.168.1.100:7860 页面来进行交互。
+#相关使用方法请参考：https://hf-mirror.com/AXERA-TECH/LibCLIP Model card说明
 ```
