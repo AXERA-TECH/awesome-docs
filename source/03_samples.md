@@ -215,6 +215,8 @@ hf download AXERA-TECH/lcm-lora-sdv1-5 --local-dir lcm-lora-sdv1-5
 # 运行
 cd /root/lcm-lora-sdv1-5/
 python3 run_txt2img_axe_infer.py
+python3 run_img2img_axe_infer.py
+python3 run_txt2img_axe_infer_prompt.py #仅支持英文输入
 ```
 
 ### LibCLIP(文搜大模型)
@@ -264,7 +266,7 @@ cd YOLO-World-V2
 # 运行
 cp install/lib/host_650/libyoloworld.so ./pyyoloworld/
 cd pyyoloworld/
-python3 gradio_example.py --yoloworld ../models/yolo_u16_ax650.axmodel --tenc ../models/clip_b1_u16_ax650.axmodel --vocab ../vocab.txt --dev_type host
+python3 gradio_example.py --yoloworld ../models/yolo_u16_ax650.axmodel --tenc ../models/clip_b1_u16_ax650.axmodel --vocab ../vocab.txt
 
 # 运行后，查看最后 log 里打印的 web 地址，例如：“HTTP 服务地址: http://x.x.x.x:7860”，x.x.x.x 替换为板端 ip 地址，使用浏览器打开页面来进行交互。
 # 可以直接使用板子自身桌面系统上的浏览器打开，也可以使用同一局域网内的电脑或手机或其他设备的浏览器打开。
