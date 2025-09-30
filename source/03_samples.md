@@ -307,7 +307,7 @@ chmod 755 main_prefill run_smollm2_360m_ax650.sh
  
 # 运行
 cd /root/SmolLM2-360M-Instruct/
-python3 smollm2_tokenizer.py --host 127.0.0.1 --port 12345
+python3 smollm2_tokenizer_uid.py --host 127.0.0.1 --port 12345
 
 # 再开一个终端执行
 cd /root/SmolLM2-360M-Instruct/
