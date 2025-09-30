@@ -303,7 +303,7 @@ cd /root/
 hf download AXERA-TECH/SmolLM2-360M-Instruct --local-dir SmolLM2-360M-Instruct
 
 cd SmolLM2-360M-Instruct/
-chmod 755 main_prefill run_smollm2_360m_ax650.sh
+chmod 755 main_* run_smollm2_360m_*.sh
  
 # 运行
 cd /root/SmolLM2-360M-Instruct/
