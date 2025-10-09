@@ -313,25 +313,6 @@ cd /root/SmolLM2-360M-Instruct/
 ./run_smollm2_360m_axcl_x86.sh
 ```
 
-### SmolVLM-256M-Instruct
-
-```
-# 下载仓库
-cd /root/
-hf download AXERA-TECH/SmolVLM-256M-Instruct --local-dir SmolVLM-256M-Instruct
-
-cd SmolVLM-256M-Instruct/
-chmod 755 main_* run_smolvlm_*.sh
- 
-# 运行
-cd /root/SmolVLM-256M-Instruct/
-python3 smolvlm_tokenizer_512.py --host 127.0.0.1 --port 12345
-
-# 再开一个终端执行
-cd /root/SmolVLM-256M-Instruct/
-./run_smolvlm_ax650.sh
-```
-
 ## Audio Models
 
 ### 3D-Speaker-MT.axera（会议音频转录）
