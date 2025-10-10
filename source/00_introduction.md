@@ -18,3 +18,4 @@
 
 ## 更新
 - 20250916：03-samples Audio Models 增加3D-Speaker-MT.axera（会议音频转录）解决方案演示示例
+- 20251009：增加算力卡axcl x86平台大模型演示示例
