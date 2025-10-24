@@ -112,5 +112,79 @@ pip3 install axengine-0.1.3-py3-none-any.whl
 **基于 AX650N 主控开发板的依赖环境安装完成！🚀**
 
 ## 算力卡
-（情况有点复杂，我后面再补充 🧐）
+### AXCL驱动安装
 
+算力卡需要提前配置AXCL驱动，详细安装流程请参考：[AXCL文档](https://axcl-docs.readthedocs.io/zh-cn/latest/)
+
+### 网络确认
+首先确保开发板能正常访问互联网。
+
+```
+(base) axera@raspberrypi:~ $ ping www.baidu.com -c 5
+PING www.a.shifen.com (180.101.49.44) 56(84) bytes of data.
+64 bytes from 180.101.49.44: icmp_seq=1 ttl=49 time=34.1 ms
+64 bytes from 180.101.49.44: icmp_seq=2 ttl=49 time=33.8 ms
+64 bytes from 180.101.49.44: icmp_seq=3 ttl=49 time=33.9 ms
+64 bytes from 180.101.49.44: icmp_seq=4 ttl=49 time=33.9 ms
+64 bytes from 180.101.49.44: icmp_seq=5 ttl=49 time=33.9 ms
+
+--- www.a.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4004ms
+rtt min/avg/max/mdev = 33.831/33.924/34.122/0.103 ms
+```
+
+### 环境依赖安装
+#### 安装基础依赖
+
+```
+apt-get update
+yes | apt-get install rsync python3-dev python3-setuptools unzip python3-pip
+yes | apt-get install libsndfile1-dev libmecab-dev
+yes | apt-get install libass-dev libfdk-aac-dev libmp3lame-dev libopus-dev libvpx-dev libx264-dev libx265-dev libssl-dev libgl1-mesa-glx
+```
+
+#### 安装 Python 依赖
+
+```
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy opencv-python transformers ml_dtypes tqdm jinja2 torch torchvision onnxruntime
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple ultralytics diffusers peft protobuf librosa kaldi_native_fbank sentencepiece
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple zhconv cn2an pypinyin jieba g2p_en nltk
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple gradio
+```
+
+#### 安装 huggingface_hub
+
+```
+cd /root/
+# 外网下载安装
+pip3 install huggingface_hub -i https://pypi.tuna.tsinghua.edu.cn/simple
+# 配置国内镜像
+export HF_ENDPOINT=https://hf-mirror.com
+```
+
+从 huggingface 上下载 repo，建议使用 huggingface_hub 下载。
+
+#### 安装 PyAXEngine
+
+PyAXEngine 是 NPU Python API，其 API 尽可能的兼容了算法工程师熟悉的 ONNXRuntime Python API，方便用户上板快速验证结果。源码仓库请见 [pyaxengine
+](https://github.com/AXERA-TECH/pyaxengine)
+
+
+直接从 Github 上下载安装（有概率失败😖）
+
+```
+wget https://github.com/AXERA-TECH/pyaxengine/releases/download/0.1.3.rc1/axengine-0.1.3-py3-none-any.whl
+```
+
+或者从 huggingface 镜像站上下载
+
+```
+hf download AXERA-TECH/PyAXEngine --local-dir PyAXEngine
+cp PyAXEngine/axengine-0.1.3-py3-none-any.whl ./
+```
+
+安装 pyaxengine
+
+```
+pip3 install axengine-0.1.3-py3-none-any.whl
+```
