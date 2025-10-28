@@ -353,7 +353,7 @@ hf download AXERA-TECH/Whisper --local-dir Whisper
 # 运行
 cd /root/Whisper/cpp/
 chmod 755 whisper_a*
-./whisper_axcl_x86  -w ../demo.wav  -p ../models-ax650/small
+./whisper_axcl_aarch64  -w ../demo.wav  -p ../models-ax650/small
 ```
 
 ### MeloTTS
