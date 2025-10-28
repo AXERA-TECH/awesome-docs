@@ -17,6 +17,6 @@ NPU AWESOME
   02_software.md
   03_samples.md
   04_samples-axcl-x86.md
-  05_samples-axcl-aarch6.md
+  05_samples-axcl-aarch64.md
   06_faq.md
   07_resource.md
