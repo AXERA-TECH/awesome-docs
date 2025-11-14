@@ -33,8 +33,10 @@ git clone https://github.com/AXERA-TECH/awesome-docs.git
     ├── 01_hardware.md
     ├── 02_software.md
     ├── 03_samples.md
-    ├── 04_faq.md
-    ├── 05_resource.md
+    ├── 04_samples-axcl-x86.md
+    ├── 05_samples-axcl-x86-parallel.md
+    ├── 07_faq.md
+    ├── 08_resource.md
     ├── conf.py
     └── index.rst
 ```

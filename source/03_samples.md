@@ -360,7 +360,7 @@ hf download AXERA-TECH/SenseVoice --local-dir SenseVoice
  
 # 运行
 cd /root/SenseVoice/
-python3 main.py -i demo.wav
+python3 main.py -i ./example/zh.mp3
 ```
 
 ### Whisper
