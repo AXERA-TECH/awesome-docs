@@ -35,6 +35,7 @@ git clone https://github.com/AXERA-TECH/awesome-docs.git
     ├── 03_samples.md
     ├── 04_samples-axcl-x86.md
     ├── 05_samples-axcl-x86-parallel.md
+    ├── 06_samples-axcl-aarch64.md
     ├── 07_faq.md
     ├── 08_resource.md
     ├── conf.py
