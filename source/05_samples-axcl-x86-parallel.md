@@ -28,7 +28,7 @@ cd /root/
 hf download AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel --local-dir Qwen2.5-7B-Instruct-TensorParallel
 
 cd ./Qwen2.5-7B-Instruct-TensorParallel/
-chmod 755 main_a* run_qwen2.5_7B_axcl_context_tp.sh
+chmod 755 main_a* run_qwen2.5_7B_*
  
 # 运行
 cd /root/Qwen2.5-7B-Instruct-TensorParallel/
@@ -38,3 +38,11 @@ python3 qwen2.5_tokenizer_uid.py --host 127.0.0.1 --port 12345
 cd /root/Qwen2.5-7B-Instruct-TensorParallel/
 ./run_qwen2.5_7B_axcl_context_tp.sh
 ```
+
+### 性能对比
+以Qwen2.5-7B-Instruct为例，统计对比axcl-x86平台下单卡与多芯级联的相关性能
+|模型|TTFT(245token)|TPS(toekns/s)|DDR占用|flash占用|
+|--|--|--|--|--|
+|Qwen2.5-7B-Instruct-w8a16-parallel|2184.62ms|5.93|11.1GB|9.5GB|
+|Qwen2.5-7B-Instruct-w4a16-parallel|2071.71ms|7.82|7.8GB|6.3GB|
+|Qwen2.5-7B-Instruct-w4a16|2747.23ms|3.97|5.7GB|5.7GB|
