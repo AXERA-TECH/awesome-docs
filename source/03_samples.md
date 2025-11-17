@@ -118,7 +118,7 @@ cd /root/Qwen2.5-1.5B-Instruct/
 ./run_qwen2.5_1.5b_ctx_ax650.sh
 ```
 
-## Multimodal Models
+## Multimodel Models
 
 ### 第三方依赖
 
@@ -360,7 +360,7 @@ hf download AXERA-TECH/SenseVoice --local-dir SenseVoice
  
 # 运行
 cd /root/SenseVoice/
-python3 main.py -i demo.wav
+python3 main.py -i ./example/zh.mp3
 ```
 
 ### Whisper
