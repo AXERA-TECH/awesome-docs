@@ -14,13 +14,17 @@
 - [外网](https://huggingface.co/AXERA-TECH)
 - [国内镜像](https://hf-mirror.com/AXERA-TECH)
 
+## Modelscope
+
+- [Modelscope](https://www.modelscope.cn/organization/AXERA-TECH)
+
 ## 淘宝开发板
 
 - AX650N/AX8850 主控
   - [M4N-DOCK(爱芯派Pro)](https://e.tb.cn/h.SZeJYWYWLsd7Qzw?tk=0lRT4JCc06U)
 - 算力卡
-  - [M.2 2280]()
-  - [M.2 2242](https://e.tb.cn/h.SZl6cZO58f1Lgiy?tk=CJa14JCXVW3)
+  - [M.2 2280(瑞莎 Radxa AX-M1)](https://e.tb.cn/h.7w0II1fMRECmBuE?tk=3ucMUlKbv57)
+  - [M.2 2242(M5Stack LLM-8850)](https://e.tb.cn/h.7vb7ahnI0EENE3h?tk=dUigUlKXb3g)
   - [Raspberry Pi AI HAT](https://e.tb.cn/h.S0YuDIj4mwJc8RI?tk=JvjY4JCYZnX)
  
 ## NPU 工具链
