@@ -2,7 +2,7 @@
 
 ## 芯片
 
-- [AX650N 产品规格书](https://axera-tech.com/filespath/files/20240202142256.pdf)
+- [AX650N 产品规格书](https://www.axera-tech.com/sites/default/files/2025-11/AXera%20AX8850N.pdf)
 
 ## GitHub
 
