@@ -2,46 +2,6 @@
 
 ## LLM
 
-### DeepSeek-R1-Distill-Qwen-7B
-
-```
-# 下载仓库
-cd /root/
- 
-hf download AXERA-TECH/DeepSeek-R1-Distill-Qwen-7B --local-dir DeepSeek-R1-Distill-Qwen-7B
- 
-cd DeepSeek-R1-Distill-Qwen-7B/
-chmod 755 main_ax650 run_deepseek-r1_7b_ax650.sh
- 
-# 运行
-cd /root/DeepSeek-R1-Distill-Qwen-7B/
-python3 deepseek-r1_tokenizer.py --host 127.0.0.1 --port 12345
-
-# 再开一个终端执行
-cd /root/DeepSeek-R1-Distill-Qwen-7B/
-./run_deepseek-r1_7b_ax650.sh
-```
-
-### DeepSeek-R1-Distill-Qwen-1.5B
-
-```
-# 下载仓库
-cd /root/
- 
-hf download AXERA-TECH/DeepSeek-R1-Distill-Qwen-1.5B --local-dir DeepSeek-R1-Distill-Qwen-1.5B
- 
-cd DeepSeek-R1-Distill-Qwen-1.5B/
-chmod 755 main_ax650 run_deepseek-r1_1.5b_ax650.sh
- 
-# 运行
-cd /root/DeepSeek-R1-Distill-Qwen-1.5B/
-python3 deepseek-r1_tokenizer_uid.py --host 127.0.0.1 --port 12345
-
-# 再开一个终端执行
-cd /root/DeepSeek-R1-Distill-Qwen-1.5B/
-./run_deepseek-r1_1.5b_ax650.sh
-```
-
 ### Qwen3-4B
 
 ```
@@ -80,45 +40,7 @@ cd /root/Qwen3-1.7B/
 ./run_qwen3_1.7b_int8_ctx_ax650.sh
 ```
 
-### Qwen2.5-7B-Instruct
-
-```
-# 下载仓库
-cd /root/
-hf download AXERA-TECH/Qwen2.5-7B-Instruct --local-dir Qwen2.5-7B-Instruct
- 
-cd Qwen2.5-7B-Instruct/
-chmod 777 main_ax650 run_qwen2.5_7b_ctx_int4_ax650.sh
- 
-# 运行
-cd /root/Qwen2.5-7B-Instruct/
-python3 qwen2.5_tokenizer_uid.py --host 127.0.0.1 --port 12345
-
-# 再开一个终端执行
-cd /root/Qwen2.5-7B-Instruct/
-./run_qwen2.5_7b_ctx_int4_ax650.sh
-```
-
-### Qwen2.5-1.5B-Instruct
-
-```
-# 下载仓库
-cd /root/
-hf download AXERA-TECH/Qwen2.5-1.5B-Instruct --local-dir Qwen2.5-1.5B-Instruct
- 
-cd Qwen2.5-1.5B-Instruct/
-chmod 777 main_ax650 run_qwen2.5_1.5b_ctx_ax650.sh
-
-# 运行
-cd /root/Qwen2.5-1.5B-Instruct/
-python3 qwen2.5_tokenizer_uid.py --host 127.0.0.1 --port 12345
-
-# 再开一个终端执行
-cd /root/Qwen2.5-1.5B-Instruct/
-./run_qwen2.5_1.5b_ctx_ax650.sh
-```
-
-## Multimodel Models
+## Multimodal Models
 
 ### 第三方依赖
 
@@ -170,7 +92,7 @@ python3 gradio_demo_python_api.py --hf_model internvl3_2b_tokenizer/ \
 
 # 运行后，查看最后log里打印的web地址，例如：“HTTP 服务地址: http://10.126.20.94:7860”。需要用浏览器打开页面来进行交互。
 # 相关使用方法请参考：https://hf-mirror.com/AXERA-TECH/InternVL3-2B Model card说明
-#可以直接使用板子自身桌面系统上的浏览器打开，也可以使用同一局域网内的电脑或手机或其他设备的浏览器打开。
+# 可以直接使用板子自身桌面系统上的浏览器打开，也可以使用同一局域网内的电脑或手机或其他设备的浏览器打开。
 ```
 
 ### Qwen2.5-VL-3B-Instruct(图片&视频理解)

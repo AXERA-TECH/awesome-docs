@@ -118,7 +118,7 @@ cd /root/Qwen2.5-1.5B-Instruct/
 ./run_qwen2.5_1.5b_ctx_int4_axcl_aarch64.sh
 ```
 
-## Multimodel Models
+## Multimodal Models
 
 ### 第三方依赖
 
