@@ -81,8 +81,13 @@ pip3 install huggingface_hub -i https://pypi.tuna.tsinghua.edu.cn/simple
 # 配置国内镜像
 export HF_ENDPOINT=https://hf-mirror.com
 ```
-
 从 huggingface 上下载 repo，建议使用 huggingface_hub 下载。
+
+#### 安装 modelscope
+
+```
+pip3 install modelscope -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 #### 安装 PyAXEngine
 
