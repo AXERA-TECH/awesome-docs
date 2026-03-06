@@ -1,8 +1,9 @@
 # 示例展示（算力卡 aarch64平台）
 
-## LLM
+## 安装AX-LLM
 
-### 安装AX-LLM
+LLM和Multimodal Models的示例需要依赖AX-LLM工具来运行，用户可以通过以下任一方式安装AX-LLM：
+
 方式一：克隆仓库后执行安装脚本：
 
 ```shell
@@ -27,6 +28,8 @@ curl -fsSL https://raw.githubusercontent.com/AXERA-TECH/ax-llm/axllm/install.sh 
 chmod +x axllm
 sudo mv axllm /usr/bin/axllm
 ```
+
+## LLM
 
 ### Qwen3-4B
 
@@ -103,25 +106,19 @@ axllm serve AXERA-TECH/Qwen3-0.6B/
 ```
 # 下载仓库
 cd /root/
+mkdir -p AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4
+cd AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4
+
 # huggingface 下载命令
-hf download AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 --local-dir Qwen3-VL-2B-Instruct-GPTQ-Int4
+hf download AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 --local-dir .
 # modelscope 下载命令
-modelscope download AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 --local_dir Qwen3-VL-2B-Instruct-GPTQ-Int4
+modelscope download AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 --local_dir .
 
-cd Qwen3-VL-2B-Instruct-GPTQ-Int4/
-chmod +x main* run*
-
-# image sample
-cd /root/Qwen3-VL-2B-Instruct-GPTQ-Int4/
-./run_image_axcl_aarch64.sh
-
-# video sample
-cd /root/Qwen3-VL-2B-Instruct-GPTQ-Int4/
-./run_video_axcl_aarch64.sh
-
-# gradio ui
-./run_axcl_aarch64_api.sh
-python3 gradio_demo.py
+cd /root
+# 运行 CLI
+axllm run AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4/
+# 运行 API 服务
+axllm serve AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4/
 
 #详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 或 https://modelscope.cn/models/AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 Model card说明
 ```
@@ -131,19 +128,20 @@ python3 gradio_demo.py
 ```
 # 下载仓库
 cd /root/
+mkdir -p AXERA-TECH/FastVLM-1.5B
+cd AXERA-TECH/FastVLM-1.5B
+
 # huggingface 下载命令
-hf download AXERA-TECH/FastVLM-1.5B --local-dir FastVLM-1.5B
+hf download AXERA-TECH/FastVLM-1.5B --local-dir .
 # modelscope 下载命令
-modelscope download AXERA-TECH/FastVLM-1.5B --local_dir FastVLM-1.5B
+modelscope download AXERA-TECH/FastVLM-1.5B --local_dir .
 
 # 运行
-cd /root/FastVLM-1.5B/
-# 安装相关依赖
-pip3 install -r requirements.txt
-
-# 执行图片理解示例
-chmod +x main* run*
-./run_axcl_aarch64.sh
+cd /root/
+# 运行 CLI
+axllm run AXERA-TECH/FastVLM-1.5B/
+# 运行 API 服务
+axllm serve AXERA-TECH/FastVLM-1.5B/
 
 #详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/FastVLM-1.5B 或 https://modelscope.cn/models/AXERA-TECH/FastVLM-1.5B Model card说明
 ```
