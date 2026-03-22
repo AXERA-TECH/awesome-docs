@@ -241,33 +241,24 @@ cd /root/SmolLM2-360M-Instruct/
 #详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/SmolLM2-360M-Instruct 或 https://modelscope.cn/models/AXERA-TECH/SmolLM2-360M-Instruct Model card说明
 ```
 
-### SmolVLM2-500M-Video-Instruct_Ax650
+### SmolVLM2-500M-Video-Instruct
 
 ```
 # 下载仓库
 cd /root/
 # huggingface 下载命令
-hf download AXERA-TECH/SmolVLM2-500M-Video-Instruct_Ax650 --local-dir SmolVLM2-500M-Video-Instruct_Ax650
+hf download AXERA-TECH/SmolVLM2-500M-Video-Instruct --local-dir SmolVLM2-500M-Video-Instruct
 # modelscope 下载命令
-modelscope download AXERA-TECH/SmolVLM2-500M-Video-Instruct_Ax650 --local_dir SmolVLM2-500M-Video-Instruct_Ax650
+modelscope download AXERA-TECH/SmolVLM2-500M-Video-Instruct --local_dir SmolVLM2-500M-Video-Instruct
 
 # 运行
-cd /root/SmolVLM2-500M-Video-Instruct_Ax650
-chmod +x main* run*
+cd /root/
+# 运行 CLI
+axllm run AXERA-TECH/SmolVLM2-500M-Video-Instruct/
+# 运行 API 服务
+axllm serve AXERA-TECH/SmolVLM2-500M-Video-Instruct/
 
-# image sample
-./run_axcl_aarch64.sh
-
-# video sample
-# Set the video parameter in run_axcl_aarch64.sh to 1
-./run_axcl_aarch64.sh
-
-# gradio ui
-./run_axcl_aarch64_api.sh
-python3 gradio_demo.py
-
-#详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/SmolVLM2-500M-Video-Instruct_Ax650 或 https://modelscope.cn/models/AXERA-TECH/SmolVLM2-500M-Video-Instruct_Ax650 Model card说明
-```
+#详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/SmolVLM2-500M-Video-Instruct 或 https://modelscope.cn/models/AXERA-TECH/SmolVLM2-500M-Video-Instruct Model card说明
 
 ## Audio Models
 
