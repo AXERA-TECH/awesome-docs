@@ -259,10 +259,12 @@ axllm run AXERA-TECH/SmolVLM2-500M-Video-Instruct/
 axllm serve AXERA-TECH/SmolVLM2-500M-Video-Instruct/
 
 #详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/SmolVLM2-500M-Video-Instruct 或 https://modelscope.cn/models/AXERA-TECH/SmolVLM2-500M-Video-Instruct Model card说明
+```
 
 ## Audio Models
 
 ### 3D-Speaker-MT.axera（会议音频转录）
+
 ```
 # 下载仓库
 cd /root/
