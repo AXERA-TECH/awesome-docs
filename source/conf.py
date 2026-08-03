@@ -33,10 +33,10 @@ extensions = [
     'myst_parser',
     "sphinx.ext.mathjax",      # 渲染数学公式的引擎，支持Latex风格
     'sphinx_copybutton',       #代码块一键复制功能，匹配requirement.txt安装的sphinx-copybutton
-    'sphinxcontrib.mermaid',   #流程图/时序图支持，匹配sphinxcontrib-mermaid
-    'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
+    #'sphinxcontrib.mermaid',   #流程图/时序图支持，匹配sphinxcontrib-mermaid
+    #'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
      #'breathe'
-    # 'sphinx_tabs.tabs',
+    'sphinx_tabs.tabs',
     #'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
     #'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
 ]
