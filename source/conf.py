@@ -8,6 +8,7 @@ import os
 # -- Project information -----------------------------------------------------
 
 project = 'Axera Terminal Product Line Docs'
+master_doc = 'index'
 copyright = '2026, AXERA Semiconductor Co., Ltd.'
 author = 'AXERA & Community'
 
