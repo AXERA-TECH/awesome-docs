@@ -55,6 +55,7 @@ sphinxcontrib-plantuml>=0.26
 sphinxcontrib-svg2pdfconverter>=1.2.0
 
 # ----10. 文档中外部链接检查（避免死链）------------------------------------------
+# conf.py中可配置：sphinx_tabs_valid_builders = ['linkcheck']
 #sphinx-ext-linkcheck>=1.0.0
 
 # ----11. 制作多语言版本文档------------------------------------------------------
