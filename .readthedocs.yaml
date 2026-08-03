@@ -11,7 +11,7 @@ build:
     python: "3.12"
 
 # 系统包：LaTeX（PDF）、Java（PlantUML）、PlantUML、Graphviz
-apt_packages:
+  apt_packages:
     - texlive-latex-recommended
     - texlive-latex-extra
     - texlive-fonts-recommended
