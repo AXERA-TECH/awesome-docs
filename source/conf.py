@@ -36,8 +36,7 @@ extensions = [
     'sphinxcontrib.mermaid',   #流程图/时序图支持，匹配sphinxcontrib-mermaid
     'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
      #'breathe'
-    'sphinx_tabs.tabs',
-    'sphinx_copybutton',       # 一键复制功能
+    # 'sphinx_tabs.tabs',
     #'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
     #'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
 ]
@@ -105,14 +104,21 @@ myst_update_mathjax = True
 # ----pdf格式生成
 # svg2pdf_converter = 'cairosvg'
 # 设置 LaTeX 引擎为 xelatex
-# latex_engine = 'xelatex'
-# 在导言区添加对中文的支持
-# latex_elements = {
-#    'preamble': r'\usepackage[UTF8]{ctex}',  # ctex 宏包会自动处理中文和字体
-# }
-# latex_documents = [
-#     (master_doc, f'{project}.tex', project, author, 'manual'),
-# ]
+latex_engine = 'xelatex'
+latex_elements = {
+    'preamble': r'''
+        \usepackage[UTF8]{ctex}
+        % 指定系统存在的字体，例如 Noto Sans CJK SC
+        \setCJKmainfont{Noto Sans CJK SC}[
+            BoldFont=Noto Sans CJK SC Bold,
+            ItalicFont=Noto Sans CJK SC,
+        ]
+    ''',
+}
+
+latex_documents = [
+    (master_doc, f'{project}.tex', project, author, 'manual'),
+]
 
 # ----eupb格式生成
 epub_title = project
