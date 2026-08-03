@@ -52,7 +52,7 @@ sphinxcontrib-plantuml>=0.26
 # 如果你的文档含 SVG 图片，建议添加：
 # 在conf.py的extension中新增：'sphinxcontrib.svg2pdfconverter'
 # --svg2pdf_converter = 'cairosvg'
-sphinxcontrib-svg2pdfconverter>=1.2.0
+# sphinxcontrib-svg2pdfconverter>=1.2.0
 
 # ----10. 文档中外部链接检查（避免死链）------------------------------------------
 # conf.py中可配置：sphinx_tabs_valid_builders = ['linkcheck']
