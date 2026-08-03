@@ -7,7 +7,7 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = 'Edge Computing Docs'
+project = 'Axera Terminal Product Line Docs'
 copyright = '2026, AXERA Semiconductor Co., Ltd.'
 author = 'AXERA & Community'
 
@@ -30,8 +30,15 @@ gettext_uuid = True
 # sphinx_copybutton 提供代码块一键复制。
 extensions = [
     'myst_parser',
-    'sphinx_copybutton',
-    'sphinxcontrib.mermaid',
+    "sphinx.ext.mathjax",      # 渲染数学公式的引擎，支持Latex风格
+    'sphinx_copybutton',       #代码块一键复制功能，匹配requirement.txt安装的sphinx-copybutton
+    'sphinxcontrib.mermaid',   #流程图/时序图支持，匹配sphinxcontrib-mermaid
+    'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
+     #'breathe'
+    'sphinx_tabs.tabs',
+    'sphinx_copybutton',       # 一键复制功能
+    'sphinxcontrib.svg2pdfconverter',
+    'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
 ]
 
 templates_path = ['_templates']
@@ -43,19 +50,22 @@ exclude_patterns = ['examples/*[!.zip]']
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
-html_title = 'AXERA Edge Computing Docs'
+html_title = 'AXERA Terminal Product Line Docs'
 
 html_theme_options = {
-    'repository_url': 'https://github.com/AXERA-TECH/awesome-docs',
+    'repository_url': 'https://github.com/jessenchen/axera-terminal-product-manual',
     'use_repository_button': True,
     'use_issues_button': True,
     'use_edit_page_button': True,
-    'repository_branch': 'dev',
+    'repository_branch': 'axera-terminal-product-manual',
     'path_to_docs': 'source',
 }
 
 # The suffix(es) of source filenames.
-source_suffix = ['.rst', '.md']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # -- mermaid -----------------------------------------------------------------
 mermaid_output_format = 'raw'
@@ -67,8 +77,47 @@ mermaid_use_local = 'mermaid/mermaid.esm.min.mjs'
 d3_version = '7.9.0'
 d3_use_local = 'mermaid/d3.min.js'
 
-# -- myst_parser -------------------------------------------------------------
-myst_enable_extensions = ['colon_fence', 'deflist', 'linkify', 'tasklist']
+# -- plantuml 支持--------------------------------------------------------------
+plantuml = 'plantuml'
+plantuml_output_format = 'svg'
+
+# -- myst_parser支持------------------------------------------------------------
+myst_enable_extensions = [
+    'colon_fence',        # 允许使用 ::: 作为代码围栏的定界符，替代传统的 ```
+    'deflist',            # 启用定义列表语法，类似于 HTML 中的 <dl> 标签
+    'linkify',            # 自动将文档中的裸 URL（如 https://example.com）转换为可点击的超链接
+    'tasklist',           # 支持 GitHub 风格的任务列表语法，如 - [x] 已完成
+    'dollarmath',         # 启用 LaTeX 风格的美元符号 $ 作为数学公式的定界符,
+]
+# 为文档中的标题自动生成 HTML 锚点（ID），方便其他页面或链接直接引用，仅作用前三级标题
 myst_heading_anchors = 3
 # 让 ```mermaid 围栏同时在 GitHub 预览与 Sphinx 构建中渲染为流程图。
 myst_fence_as_directive = ['mermaid']
+# 自动更新
+myst_update_mathjax = True
+
+# --Breathe 连接 Doxygen 配置 -------------------------------------------------
+# breathe_projects = {"X2000": os.path.join(os.path.dirname(__file__), "..", "doxygen", "xml")}
+# breathe_default_project = "X2000"
+# breathe_default_members = ('members', 'undoc-members')
+
+# ----pdf格式生成
+svg2pdf_converter = 'cairosvg'
+# 设置 LaTeX 引擎为 xelatex
+latex_engine = ''xelatex'
+# 在导言区添加对中文的支持
+latex_elements = {
+    'preamble': r'\usepackage[UTF8]{ctex}',  # ctex 宏包会自动处理中文和字体
+}
+latex_documents = [
+    (master_doc, f'{project}.tex', project, author, 'manual'),
+]
+
+# ----eupb格式生成
+epub_title = project
+epub_author = author
+epub_language = 'zh_CN'  # 例如 'zh_CN'
+epub_publisher = author   # 可选
+epub_copyright = '2026, AXERA Semiconductor Co., Ltd.'  # 可选
+epub_description = 'Axera Terminal Product Line Documentation' #可选
+
