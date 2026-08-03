@@ -33,8 +33,8 @@ extensions = [
     'myst_parser',
     "sphinx.ext.mathjax",      # 渲染数学公式的引擎，支持Latex风格
     'sphinx_copybutton',       #代码块一键复制功能，匹配requirement.txt安装的sphinx-copybutton
-    #'sphinxcontrib.mermaid',   #流程图/时序图支持，匹配sphinxcontrib-mermaid
-    #'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
+    'sphinxcontrib.mermaid',   #流程图/时序图支持，匹配sphinxcontrib-mermaid
+    'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
      #'breathe'
     'sphinx_tabs.tabs',
     #'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
@@ -87,7 +87,7 @@ myst_enable_extensions = [
     'deflist',            # 启用定义列表语法，类似于 HTML 中的 <dl> 标签
     'linkify',            # 自动将文档中的裸 URL（如 https://example.com）转换为可点击的超链接
     'tasklist',           # 支持 GitHub 风格的任务列表语法，如 - [x] 已完成
-    'dollarmath',         # 启用 LaTeX 风格的美元符号 $ 作为数学公式的定界符,
+    # 'dollarmath',         # 启用 LaTeX 风格的美元符号 $ 作为数学公式的定界符,
 ]
 # 为文档中的标题自动生成 HTML 锚点（ID），方便其他页面或链接直接引用，仅作用前三级标题
 myst_heading_anchors = 3
