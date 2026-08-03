@@ -102,7 +102,7 @@ myst_update_mathjax = True
 # breathe_default_members = ('members', 'undoc-members')
 
 # ----pdf格式生成
-# svg2pdf_converter = 'cairosvg'
+svg2pdf_converter = 'cairosvg'
 # 设置 LaTeX 引擎为 xelatex
 latex_engine = 'xelatex'
 latex_elements = {
