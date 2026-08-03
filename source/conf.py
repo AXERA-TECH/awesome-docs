@@ -39,7 +39,7 @@ extensions = [
     'sphinx_tabs.tabs',
     'sphinx_copybutton',       # 一键复制功能
     #'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
-    'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
+    #'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
 ]
 
 templates_path = ['_templates']
