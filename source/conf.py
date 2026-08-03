@@ -103,16 +103,16 @@ myst_update_mathjax = True
 # breathe_default_members = ('members', 'undoc-members')
 
 # ----pdf格式生成
-svg2pdf_converter = 'cairosvg'
+# svg2pdf_converter = 'cairosvg'
 # 设置 LaTeX 引擎为 xelatex
-latex_engine = 'xelatex'
+# latex_engine = 'xelatex'
 # 在导言区添加对中文的支持
-latex_elements = {
-    'preamble': r'\usepackage[UTF8]{ctex}',  # ctex 宏包会自动处理中文和字体
-}
-latex_documents = [
-    (master_doc, f'{project}.tex', project, author, 'manual'),
-]
+# latex_elements = {
+#    'preamble': r'\usepackage[UTF8]{ctex}',  # ctex 宏包会自动处理中文和字体
+# }
+# latex_documents = [
+#     (master_doc, f'{project}.tex', project, author, 'manual'),
+# ]
 
 # ----eupb格式生成
 epub_title = project
