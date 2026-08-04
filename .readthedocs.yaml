@@ -33,6 +33,7 @@ python:
     - requirements: requirements.txt
     
 # Optionally build your docs in additional formats such as PDF and ePub
+# 打开下面配置，编译超时，谨慎打开
 #formats:
 #   - pdf
 #   - epub
