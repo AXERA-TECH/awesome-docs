@@ -56,7 +56,7 @@ sphinxcontrib-plantuml>=0.26
 
 # ----10. 文档中外部链接检查（避免死链）------------------------------------------
 # conf.py中可配置：sphinx_tabs_valid_builders = ['linkcheck']
-# sphinx-ext-linkcheck>=1.0.0
+sphinx-ext-linkcheck>=1.0.0
 
 # ----11. 制作多语言版本文档------------------------------------------------------
 # 提供命令行工具（如 sphinx-intl update 和 sphinx-intl build），用于提取原文中的待翻译文本（生成 .pot 文件）
