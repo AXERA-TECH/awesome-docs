@@ -37,6 +37,7 @@ extensions = [
     'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
     'breathe',
     'sphinx_tabs.tabs',
+    'sphinx.ext.linkcheck', 
     #'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
     #'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
 ]
