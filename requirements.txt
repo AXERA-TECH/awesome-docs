@@ -24,12 +24,12 @@ myst-parser>=2.0.0
 # --breathe_default_project = "MyProject"
 # --breathe_default_members = ('members', 'undoc-members')
 # 同时，在.readthedocs.yaml 的 apt_packages 中安装 doxygen
-breathe>=4.35.0
+# breathe>=4.35.0
 
 # ----5. （可选）增强文档体验的扩展-----------------------------------------------
 # 标签页组件，用于多语言代码示例、不同版本对比等
 # 在conf.py中需要在extension中配置：'sphinx_tabs.tabs'
-sphinx-tabs>=3.4.0
+# sphinx-tabs>=3.4.0
 
 # ----6. 代码块一键复制按钮-------------------------------------------------------
 # 在conf.py中需要在extension中配置'sphinx_copybutton'
@@ -43,7 +43,7 @@ sphinxcontrib-mermaid>=0.9.0
 # 需要在conf.py的extension中新增：'sphinxcontrib.plantuml'
 # --plantuml_output_format = 'svg'
 # 同时在.readthedocs.yaml 的 apt_packages 中安装 plantuml 和 graphviz
-sphinxcontrib-plantuml>=0.26
+# sphinxcontrib-plantuml>=0.26
 
 # ----9. PDF 和 ePub 生成注意事项：----------------------------------------------
 # PDF 依赖系统 LaTeX 环境（在 .readthedocs.yaml 中通过 apt_packages 安装），
@@ -56,7 +56,7 @@ sphinxcontrib-plantuml>=0.26
 
 # ----10. 文档中外部链接检查（避免死链）------------------------------------------
 # conf.py中可配置：sphinx_tabs_valid_builders = ['linkcheck']
-#sphinx-ext-linkcheck>=1.0.0
+# sphinx-ext-linkcheck>=1.0.0
 
 # ----11. 制作多语言版本文档------------------------------------------------------
 # 提供命令行工具（如 sphinx-intl update 和 sphinx-intl build），用于提取原文中的待翻译文本（生成 .pot 文件）
