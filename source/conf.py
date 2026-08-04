@@ -34,8 +34,8 @@ extensions = [
     "sphinx.ext.mathjax",      # 渲染数学公式的引擎，支持Latex风格
     'sphinx_copybutton',       #代码块一键复制功能，匹配requirement.txt安装的sphinx-copybutton
     'sphinxcontrib.mermaid',   #流程图/时序图支持，匹配sphinxcontrib-mermaid
-    'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
-     #'breathe'
+    #'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
+    #'breathe'
     'sphinx_tabs.tabs',
     #'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
     #'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
@@ -78,8 +78,8 @@ d3_version = '7.9.0'
 d3_use_local = 'mermaid/d3.min.js'
 
 # -- plantuml 支持--------------------------------------------------------------
-plantuml = 'plantuml'
-plantuml_output_format = 'svg'
+#plantuml = 'plantuml'
+#plantuml_output_format = 'svg'
 
 # -- myst_parser支持------------------------------------------------------------
 myst_enable_extensions = [
@@ -102,29 +102,27 @@ myst_update_mathjax = True
 # breathe_default_members = ('members', 'undoc-members')
 
 # ----pdf格式生成
-svg2pdf_converter = 'cairosvg'
+#svg2pdf_converter = 'cairosvg'
 # 设置 LaTeX 引擎为 xelatex
 latex_engine = 'xelatex'
-latex_elements = {
-    'preamble': r'''
-        \usepackage[UTF8]{ctex}
-        % 指定系统存在的字体，例如 Noto Sans CJK SC
-        \setCJKmainfont{Noto Sans CJK SC}[
-            BoldFont=Noto Sans CJK SC Bold,
-            ItalicFont=Noto Sans CJK SC,
-        ]
-    ''',
-}
+#latex_elements = {
+#    'preamble': r'''
+#        \usepackage[UTF8]{ctex}
+#        % 指定系统存在的字体，例如 Noto Sans CJK SC
+#        \setCJKmainfont{Noto Sans CJK SC}[
+#            BoldFont=Noto Sans CJK SC Bold,
+#            ItalicFont=Noto Sans CJK SC,
+#        ]
+#    ''',
+#}
 
-latex_documents = [
-    (master_doc, f'{project}.tex', project, author, 'manual'),
-]
+#latex_documents = [(master_doc, f'{project}.tex', project, author, 'manual'),]
 
 # ----eupb格式生成
-epub_title = project
-epub_author = author
-epub_language = 'zh_CN'  # 例如 'zh_CN'
-epub_publisher = author   # 可选
-epub_copyright = '2026, AXERA Semiconductor Co., Ltd.'  # 可选
-epub_description = 'Axera Terminal Product Line Documentation' #可选
+#epub_title = project
+#epub_author = author
+#epub_language = 'zh_CN'  # 例如 'zh_CN'
+#epub_publisher = author   # 可选
+#epub_copyright = '2026, AXERA Semiconductor Co., Ltd.'  # 可选
+#epub_description = 'Axera Terminal Product Line Documentation' #可选
 
