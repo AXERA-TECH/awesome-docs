@@ -37,8 +37,6 @@ extensions = [
     'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
     'breathe',
     'sphinx_tabs.tabs',
-    #'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
-    #'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
 ]
 
 templates_path = ['_templates']
@@ -97,8 +95,8 @@ myst_fence_as_directive = ['mermaid']
 myst_update_mathjax = True
 
 # --Breathe 连接 Doxygen 配置 -------------------------------------------------
-breathe_projects = {"X2000": os.path.join(os.path.dirname(__file__), "..", "doxygen", "xml")}
-breathe_default_project = "X2000"
+breathe_projects = {"axera": os.path.join(os.path.dirname(__file__), "..", "doxygen", "xml")}
+breathe_default_project = "axera"
 breathe_default_members = ('members', 'undoc-members')
 
 # ----pdf格式生成
