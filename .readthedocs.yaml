@@ -11,17 +11,17 @@ build:
     python: "3.12"
 
 # 系统包：LaTeX（PDF）、Java（PlantUML）、PlantUML、Graphviz
-  apt_packages:
-    - texlive-latex-recommended
-    - texlive-latex-extra
-    - texlive-fonts-recommended
-    - texlive-xetex
-    - latexmk
-    - texlive-lang-chinese
-    - fonts-noto-cjk
-    - default-jre-headless      # PlantUML 依赖 Java
-    - plantuml
-    - graphviz
+#  apt_packages:
+#    - texlive-latex-recommended
+#    - texlive-latex-extra
+#    - texlive-fonts-recommended
+#    - texlive-xetex
+#    - latexmk
+#    - texlive-lang-chinese
+#    - fonts-noto-cjk
+#    - default-jre-headless      # PlantUML 依赖 Java
+#     - plantuml
+#    - graphviz
     
 # 语言由 conf.py 读取 READTHEDOCS_LANGUAGE 环境变量自动切换：
 #   - 中文项目（主项目）：默认 zh_CN
