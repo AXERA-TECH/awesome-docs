@@ -16,7 +16,7 @@ build:
     - texlive-latex-extra
     - texlive-fonts-recommended
     - texlive-xetex
-#    - latexmk
+    - latexmk
     - texlive-lang-chinese
     - fonts-noto-cjk
     - default-jre-headless      # PlantUML 依赖 Java
@@ -33,9 +33,9 @@ python:
     - requirements: requirements.txt
     
 # Optionally build your docs in additional formats such as PDF and ePub
-formats:
-   - pdf
-   - epub
+#formats:
+#   - pdf
+#   - epub
    
 sphinx:
   configuration: source/conf.py
