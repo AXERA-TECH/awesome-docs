@@ -36,8 +36,8 @@ extensions = [
     #'sphinxcontrib.mermaid',   #流程图/时序图支持，匹配sphinxcontrib-mermaid
     #'sphinxcontrib.plantuml',  #plantuml支持，匹配sphinxcontrib-plantuml
     #'breathe'
-    #'sphinx_tabs.tabs',
-    #'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
+    'sphinx_tabs.tabs',
+    'sphinxcontrib.svg2pdfconverter', #apt_packages内需要librsvg2-bin
     #'linkify',                 # 自动将纯文本 URL 转换为可点击的超链接
 ]
 
@@ -78,8 +78,8 @@ d3_version = '7.9.0'
 d3_use_local = 'mermaid/d3.min.js'
 
 # -- plantuml 支持--------------------------------------------------------------
-#plantuml = 'plantuml'
-#plantuml_output_format = 'svg'
+plantuml = 'plantuml'
+plantuml_output_format = 'svg'
 
 # -- myst_parser支持------------------------------------------------------------
 #myst_enable_extensions = [
