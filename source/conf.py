@@ -104,25 +104,25 @@ breathe_default_members = ('members', 'undoc-members')
 # ----pdf格式生成
 #svg2pdf_converter = 'cairosvg'
 # 设置 LaTeX 引擎为 xelatex
-#latex_engine = 'xelatex'
-#latex_elements = {
-#    'preamble': r'''
-#        \usepackage[UTF8]{ctex}
-#        % 指定系统存在的字体，例如 Noto Sans CJK SC
-#        \setCJKmainfont{Noto Sans CJK SC}[
-#            BoldFont=Noto Sans CJK SC Bold,
-#            ItalicFont=Noto Sans CJK SC,
-#        ]
-#    ''',
-#}
+latex_engine = 'xelatex'
+latex_elements = {
+    'preamble': r'''
+        \usepackage[UTF8]{ctex}
+        % 指定系统存在的字体，例如 Noto Sans CJK SC
+        \setCJKmainfont{Noto Sans CJK SC}[
+            BoldFont=Noto Sans CJK SC Bold,
+            ItalicFont=Noto Sans CJK SC,
+        ]
+    ''',
+}
 
-#latex_documents = [(master_doc, f'{project}.tex', project, author, 'manual'),]
+latex_documents = [(master_doc, f'{project}.tex', project, author, 'manual'),]
 
 # ----eupb格式生成
-#epub_title = project
-#epub_author = author
-#epub_language = 'zh_CN'  # 例如 'zh_CN'
-#epub_publisher = author   # 可选
-#epub_copyright = '2026, AXERA Semiconductor Co., Ltd.'  # 可选
-#epub_description = 'Axera Terminal Product Line Documentation' #可选
+epub_title = project
+epub_author = author
+epub_language = 'zh_CN'  # 例如 'zh_CN'
+epub_publisher = author   # 可选
+epub_copyright = '2026, AXERA Semiconductor Co., Ltd.'  # 可选
+epub_description = 'Axera Terminal Product Line Documentation' #可选
 
