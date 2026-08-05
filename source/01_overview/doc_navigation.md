@@ -14,7 +14,7 @@
 | 官方开发板基础使用说明 | [4. 开发板使用入门](../04_hardware/index.md) |
 | 官方SDK及开发工具链基础使用说明 | [5. SDK使用入门](../05_software/index.md) |
 | 系统开发、移植及使用指南 | [6. 系统开发指南](../06_os_development_guide/index.md) |
-| 系统内存划分原理及使用指南 | [7. 系统内存](../07_os_memeor_guide/index.md) |
+| 系统内存划分原理及使用指南 | [7. 系统内存配置指南](../07_os_memeor_guide/index.md) |
 | 基础外设模块使用、开发指南 | [8. 外设驱动使用指南](../08_peripheral_userManual/index.md) |
 | Pipeline视频流程搭建及各模块使用配置指南 | [9. 视频流Pipeline配置使用指南](../09_multimedia_guide/index.md) |
 | 编解码模块使用配置指南 | [10. 编解码配置调试指南](../10_codec_guide/index.md) |
@@ -22,6 +22,8 @@
 | VO、DPU显示模块使用配置指南 | [12. 显示配置与调试指南](../12_display_vo_guide/index.md) |
 | sensor、图像与ISP模块使用指南 | [13. Sensor、图像与ISP配置指南](../13_sensor_image_isp_gudie/index.md) |
 | 图像、音频、AI、中间件软件示例 | [14. 模块示例](../06_solutions/index.md) |
+| IPC常用功能及解决方案 | [15. IPC解决方案](../14_solution_guide/index.md) |
+| 常见问题debug及log分析指南 | [16. 系统、模块Debug与log分析](../15_debug_guide/index.md) |
 | 找行业落地方案 | [7. 行业解决方案](../07_solutions/index.md) |
 | 第三方硬件板卡 | [8. 生态硬件板卡](../08_hardware/index.md) |
 | 第三方解决方案 | [9. 生态解决方案](../09_thirdparty/index.md) |
