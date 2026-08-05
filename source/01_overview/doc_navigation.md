@@ -8,12 +8,20 @@
 
 | 你想做什么 | 去哪一章 |
 | --- | --- |
-| 了解芯片规格和第一次拿到开发板 | [1. 概览](index.md) |
-| 了解芯片AI的性能 | [2. 性能与基准测试](../02_benchmark/index.md) |
-| 第一次拿到板子点亮并跑通NPU示例 | [3. 快速上手](../03_hardware/index.md) |
+| 了解芯片规格、不同封装芯片差异和产品选型 | [1. 概览](index.md) |
+| 了解芯片的性能和常规应用功耗 | [2. 性能与功耗测试](../02_benchmark/index.md) |
+| 第一次拿到板子烧录并跑通出流示例 | [3. 快速上手](../03_hardware/index.md) |
 | 官方开发板基础使用说明 | [4. 开发板使用入门](../04_hardware/index.md) |
-| 官方SDK及NPU工具链基础使用说明 | [5. SDK使用入门](../05_software/index.md) |
-| 图像、音频、AI、中间件软件示例 | [6. 模块示例](../06_solutions/index.md) |
+| 官方SDK及开发工具链基础使用说明 | [5. SDK使用入门](../05_software/index.md) |
+| 系统开发、移植及使用指南 | [6. 系统开发指南](../06_os_development_guide/index.md) |
+| 系统内存划分原理及使用指南 | [7. 系统内存](../07_os_memeor_guide/index.md) |
+| 基础外设模块使用、开发指南 | [8. 外设驱动使用指南](../08_peripheral_userManual/index.md) |
+| Pipeline视频流程搭建及各模块使用配置指南 | [9. 视频流Pipeline配置使用指南](../09_multimedia_guide/index.md) |
+| 编解码模块使用配置指南 | [10. 编解码配置调试指南](../10_codec_guide/index.md) |
+| 音频配置、音频算法及调试使用指南 | [11. 音频配置与调试指南](../11_audio_guide/index.md) |
+| VO、DPU显示模块使用配置指南 | [12. 显示配置与调试指南](../12_display_vo_guide/index.md) |
+| sensor、图像与ISP模块使用指南 | [13. Sensor、图像与ISP配置指南](../13_sensor_image_isp_gudie/index.md) |
+| 图像、音频、AI、中间件软件示例 | [14. 模块示例](../06_solutions/index.md) |
 | 找行业落地方案 | [7. 行业解决方案](../07_solutions/index.md) |
 | 第三方硬件板卡 | [8. 生态硬件板卡](../08_hardware/index.md) |
 | 第三方解决方案 | [9. 生态解决方案](../09_thirdparty/index.md) |
