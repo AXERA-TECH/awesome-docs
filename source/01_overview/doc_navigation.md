@@ -16,7 +16,7 @@
 | 系统开发、移植及使用指南 | [6. 系统开发指南](../06_os_development_guide/index.md) |
 | 系统内存划分原理及使用指南 | [7. 系统内存配置指南](../07_os_memeor_guide/index.md) |
 | 基础外设模块使用、开发指南 | [8. 外设驱动使用指南](../08_peripheral_userManual/index.md) |
-| Pipeline视频流程搭建及各模块使用配置指南 | [9. 视频流Pipeline配置使用指南](../09_multimedia_guide/index.md) |
+| Pipeline视频流程搭建及各模块使用配置指南 | [9. 视频配置使用指南](../09_multimedia_guide/index.md) |
 | 编解码模块使用配置指南 | [10. 编解码配置调试指南](../10_codec_guide/index.md) |
 | 音频配置、音频算法及调试使用指南 | [11. 音频配置与调试指南](../11_audio_guide/index.md) |
 | VO、DPU显示模块使用配置指南 | [12. 显示配置与调试指南](../12_display_vo_guide/index.md) |
