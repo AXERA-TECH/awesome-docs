@@ -23,7 +23,8 @@
 | sensor、图像与ISP模块使用指南 | [13. Sensor、图像与ISP配置指南](../13_sensor_image_isp_gudie/index.md) |
 | 图像、音频、AI、中间件软件示例 | [14. 模块示例](../06_solutions/index.md) |
 | IPC常用功能及解决方案 | [15. IPC解决方案](../14_solution_guide/index.md) |
-| 常见问题debug及log分析指南 | [16. 系统、模块Debug与log分析](../15_debug_guide/index.md) |
+| 系统问题debug及log分析指南 | [16. 系统、模块Debug与log分析](../15_debug_guide/index.md) |
+| 常见问题问题FAQ指南 | [17. FAQ汇总指南](../16_FAQ_guide/index.md) |
 | 找行业落地方案 | [7. 行业解决方案](../07_solutions/index.md) |
 | 第三方硬件板卡 | [8. 生态硬件板卡](../08_hardware/index.md) |
 | 第三方解决方案 | [9. 生态解决方案](../09_thirdparty/index.md) |
