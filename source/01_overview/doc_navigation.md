@@ -24,9 +24,9 @@
 | 模型转换、工具使用指南 | [14. 模型与工具转换指南](../14_axmodel_tools_guide/index.md) |
 | 模块与中间件示例 | [15. sample与中间件指南](../15_sample_guide/index.md) |
 | IPC常用功能及解决方案 | [16. IPC解决方案](../16_solution_guide/index.md) |
-| 系统问题debug及log分析指南 | [16. 系统、模块Debug与log分析](../16_debug_guide/index.md) |
-| 安全启动与加密算法应用介绍 | [17. 安全启动与加密](../17_secure_boot/index.md) |
-| 常见问题问题FAQ指南 | [18. FAQ汇总指南](../18_FAQ_guide/index.md) |
+| 系统问题debug及log分析指南 | [17. 系统、模块Debug与log分析](../17_debug_guide/index.md) |
+| 安全启动与加密算法应用介绍 | [18. 安全启动与加密](../18_secure_boot/index.md) |
+| 常见问题问题FAQ指南 | [19. FAQ汇总指南](../19_FAQ_guide/index.md) |
 | 图像、音频、AI、中间件软件示例 | [6. 模块示例](../06_solutions/index.md) |
 | 找行业落地方案 | [7. 行业解决方案](../07_solutions/index.md) |
 | 第三方硬件板卡 | [8. 生态硬件板卡](../08_hardware/index.md) |
