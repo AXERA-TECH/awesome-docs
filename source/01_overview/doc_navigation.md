@@ -21,10 +21,11 @@
 | 音频配置、音频算法及调试使用指南 | [11. 音频配置与调试指南](../11_audio_guide/index.md) |
 | VO、DPU显示模块使用配置指南 | [12. 显示配置与调试指南](../12_display_vo_guide/index.md) |
 | sensor、图像与ISP模块使用指南 | [13. Sensor、图像与ISP配置指南](../13_sensor_image_isp_gudie/index.md) |
-| 图像、音频、AI、中间件软件示例 | [14. 模块示例](../06_solutions/index.md) |
+| 模型转换、工具使用指南 | [14. 模型与工具转换指南](../14_axmodel_tools_guide/index.md) |
 | IPC常用功能及解决方案 | [15. IPC解决方案](../14_solution_guide/index.md) |
 | 系统问题debug及log分析指南 | [16. 系统、模块Debug与log分析](../15_debug_guide/index.md) |
 | 常见问题问题FAQ指南 | [17. FAQ汇总指南](../16_FAQ_guide/index.md) |
+| 图像、音频、AI、中间件软件示例 | [14. 模块示例](../06_solutions/index.md) |
 | 找行业落地方案 | [7. 行业解决方案](../07_solutions/index.md) |
 | 第三方硬件板卡 | [8. 生态硬件板卡](../08_hardware/index.md) |
 | 第三方解决方案 | [9. 生态解决方案](../09_thirdparty/index.md) |
