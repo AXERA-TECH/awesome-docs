@@ -100,6 +100,29 @@ demux → decode → (npu + osd + tracking) → N × (encode → mux)
 
 跟踪既可以在主程序侧完成（`npu.enable_tracking`），也可以在插件内部完成（`ax_plugin_init_info.enable_tracking`）；插件内可直接复用 `axpipeline::tracking::ByteTrack` 搭建多级模型链路（检测 → 跟踪 → 分类 / 属性）。二者择一，避免双重跟踪。
 
+**内嵌 Web 控制台**
+
+`ax_pipeline_app` 内嵌了一个网页控制台（编译期打进二进制，无需部署任何外部 Web 服务），启动时加 `--http_port` 即可从浏览器完成全部配置与运维：
+
+```bash
+# pipelines 可为空数组，全部在网页上配置
+./ax_pipeline_app -c config.json -t 0 --http_port 8901 --http_addr 0.0.0.0
+```
+
+![控制台总览](../_static/06_samples/ax_pipeline_webui_overview.jpg)
+
+- **Pipeline 管理**：表单新建（RTSP / MP4 源）、启停、删除、配置回读编辑，运行中热生效，不影响其他通道。
+- **插件自描述表单**：配置项由插件通过 `ax_plugin_get_config_schema()` 自己声明，选哪个算法就出哪套表单，新增插件网页零改动。
+- **一键导出 / 加载**：网页配好的整套 pipeline 可导出为标准配置文件（下次直接 `-c` 启动），也可在网页上重新加载，同名替换、新名添加。
+- **全量监控**：每路解码 / 编码 / AI 帧率，整机 CPU、DDR、CMM（NPU / 编解码专用内存）实时刷新。
+- **实时预览**：卡片快照 4 秒一刷；点开进入 MJPEG 直播，叠加按 track 上色的检测框。快照与直播均为请求驱动，**无人观看时不做任何 JPEG 编码，零后台开销**。
+
+![插件表单自动生成](../_static/06_samples/ax_pipeline_webui_form.png)
+
+![实时检测直播](../_static/06_samples/ax_pipeline_webui_live.jpg)
+
+控制台使用指南（截图版逐步说明）：<https://github.com/AXERA-TECH/ax-pipeline/blob/main/docs/webui.md>
+
 仓库：<https://github.com/AXERA-TECH/ax-pipeline>
 
 ## 业务逻辑组件
