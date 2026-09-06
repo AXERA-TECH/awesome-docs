@@ -12,7 +12,7 @@ copyright = '2026, AXERA Semiconductor Co., Ltd.'
 author = 'AXERA & Community'
 
 # The full version, including alpha/beta/rc tags
-release = 'v1.0.0'
+release = 'v1.1.0'
 
 # -- Internationalization ----------------------------------------------------
 # 语言由环境变量驱动，便于同一份配置服务中文 / 英文两个 Read the Docs 项目。
