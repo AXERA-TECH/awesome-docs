@@ -146,9 +146,7 @@ SDK环境搭建、代码拉取详见 Software Doc\board\AX SDK使用说明。
 
 ### uart 登陆
 
-将demo硬件板与调试电脑按上图连接好后，打开 MobaXterm/SecureCRT/Xshell之类的ssh和serial控制台工具。设置对应的com串口号，串口波特率921600。具体设置如下图所示：
-![Stereo_depth demo图](../_static/04_hardware/robot_demo_22.png)
-设备正常启动后会打印如下内容，并进入控制台：
+将demo硬件板与调试电脑按上图连接好后，打开 MobaXterm/SecureCRT/Xshell之类的ssh和serial控制台工具。设置对应的com串口号，串口波特率 115200。设备正常启动后会打印如下内容，并进入控制台：
 ![Stereo_depth demo图](../_static/04_hardware/robot_demo_23.png)
 
 ### ssh登陆
