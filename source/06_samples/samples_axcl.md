@@ -24,3 +24,13 @@
 ```{note}
 算力卡支持 x86 和 aarch64 两种 Host 平台，具体差异与编译方法见 AXCL 文档的 SDK 编译章节。
 ```
+
+## M.2 算力卡多核性能提升技巧
+
+在使用 M.2 算力卡进行多路推理或 Benchmark 时，可以通过频率、CPU 亲和性和中断亲和性减少调度及 PCIe 通信开销，提升 Host 与算力卡协同运行时的性能稳定性：
+
+- 将 Host CPU、卡端 DDR 和 NPU 频率设置为平台允许的最高档位；
+- 将应用线程绑定到负责该任务的 Host CPU 大核；
+- 将算力卡的 NPU 中断绑定到应用所使用的 Host CPU 大核。
+
+这些设置应在运行 Benchmark 或正式业务前完成，并在测试记录中注明 Host CPU/DDR、卡端 DDR/NPU 的实际频率，以及应用线程和 NPU 中断的 CPU 亲和性。频率调整、线程绑核和 IRQ 绑核的节点及命令会随 Host 架构、Linux 内核、AXCL 驱动和算力卡固件版本变化，请按照对应版本的 [AXCL 文档](https://axcl-docs.readthedocs.io/zh-cn/latest/)执行，不能直接套用其他平台的配置。
