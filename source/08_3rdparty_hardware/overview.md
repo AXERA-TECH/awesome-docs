@@ -20,6 +20,7 @@
 | --- | --- | --- | --- |
 | [AI-8850 LLM Acceleration M.2 Kit](m5stack.md) | 4GB | AX8850 | M5Stack |
 | [AICore AX-M1](radxa.md) | 8GB | AX8850 | 瑞莎科技 |
+| [AX8850 M.2 AI 算力卡](100ask.md) | 8GB / 16GB | AX8850 | 百问网 |
 | [M.2 2280 算力卡](yiyue.md) | 以商品 SKU 为准 | AX8850 | 以悦科技 |
 
 ### 算力卡已适配主控架构
