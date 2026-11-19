@@ -23,7 +23,7 @@
 ### 社区版本
 
 - [AX8850](https://modelscope.cn/models/AXERA-TECH/AX650-Community-Hub/tree/master/sdk)
-- AX8910(待完善)
+- [AX8910](https://modelscope.cn/models/AXERA-TECH/AX637-SDK/files)
 
 
 ### SDK 根目录核心结构说明
